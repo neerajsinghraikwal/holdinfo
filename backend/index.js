@@ -7,7 +7,7 @@ const bodyparser=require('body-parser');
 
 const connect = require("./config/db");
 const cryptoRouter = require("./routes/crypto.route");
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 app.use(express.json());
