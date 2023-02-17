@@ -7,7 +7,7 @@ const bodyparser=require('body-parser');
 
 const connect = require("./config/db");
 const cryptoRouter = require("./routes/crypto.route");
-const PORT = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 const app = express();
 app.use(express.json());
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 	res.send("hello world!");
 });
 
-app.listen(PORT, async () => {
+app.listen(port, async () => {
 	connect()
 	console.log(`Listening at http://localhost:${PORT}`);
 });
