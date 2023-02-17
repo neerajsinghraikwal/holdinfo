@@ -1,7 +1,7 @@
 let rowsouter = document.getElementById("rowsouter");
     function getData() {
       rowsouter.innerHTML = "";
-      fetch("http://localhost:8080/crypto")
+      fetch("https://holdinfo.onrender.com/crypto")
         .then((res) => res.json())
         .then((data) => appendData(data));
     }
